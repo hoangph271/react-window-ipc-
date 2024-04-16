@@ -75,11 +75,12 @@ function App () {
                 type="checkbox"
                 checked={todo.isDone}
                 onChange={() => {
-                  setTodos(todos.map(t => {
-                    if (t.id === todo.id) {
-                      return { ...t, isDone: !t.isDone }
+                  setTodos(todos.map(it => {
+                    if (it.id === todo.id) {
+                      return { ...it, isDone: !it.isDone }
                     }
-                    return t
+
+                    return it
                   }))
                 }}
               />
